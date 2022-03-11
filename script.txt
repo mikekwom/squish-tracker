@@ -1,0 +1,8 @@
+1. Introduce self/project
+2. Squish tracker was made for my wife and other collectors to track their collection of squishmallows
+3. web page is respojsive
+4. Can create an account and log in
+5. uses local storage to save user data. Log out clears local storage
+6. On profile it tracks number of quishmallows owned
+7. Can add new squishmallows using modal form
+8. Squish is then added to databse and displayed on profile page

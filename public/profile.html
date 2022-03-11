@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>My Profile</title>
+  </head>
+  <body>
+    <!-- navbar for desktop view -->
+    <nav id="desktop-view" class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">Squish Tracker</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="#">My Profile</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="register-btn-li hidden">
+            <a href="register.html"
+              ><span class="glyphicon glyphicon-user"></span>Sign Up</a
+            >
+          </li>
+          <li class="login-btn-li hidden">
+            <a href="login.html"
+              ><span class="glyphicon glyphicon-login"></span>Login</a
+            >
+          </li>
+          <li class="log-out-btn-li">
+            <button type="button" class="btn btn-default btn-sm log-out-btn">
+              <span class="glyphicon glyphicon-log-out"></span> Log out
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- navbar for mobile view -->
+    <nav id="mobile-view" class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#myNavbar"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Squish Tracker</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="#">My Profile</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="register-btn-li">
+              <a href="register.html"
+                ><span class="glyphicon glyphicon-user register-btn"></span>Sign
+                Up</a
+              >
+            </li>
+            <li class="login-btn-li">
+              <a href="login.html"
+                ><span class="glyphicon glyphicon-log-in"></span>Login</a
+              >
+            </li>
+            <li class="log-out-btn-li hidden">
+              <button type="button" class="btn btn-default btn-sm log-out-btn">
+                <span class="glyphicon glyphicon-log-out"></span> Log out
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- create an account link if not signed in-->
+    <div id="create-account-prompt" class="container hidden">
+      <button class="btn btn-default center-block">
+        <a href="register.html">Create an Account</a>
+      </button>
+    </div>
+
+    <!-- comment: profile header -->
+    <div id="profile-body">
+      <!--   <div class="container" id="profile-header">
+        <h2>AmberLee</h2>
+        <img src="images/amber_squish_avatar.jpg" id="av-img" />
+        <h2>Squish Count:</h2>
+      </div>
+
+      <hr />
+
+      comment: Add squish Modal
+      <div class="container">
+        comment: Trigger the modal with a button
+        <button
+          type="button"
+          class="btn btn-info btn-lg center-block"
+          data-toggle="modal"
+          data-target="#myModal"
+        >
+          Add a Squish
+        </button>
+        comment: modal
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog">
+            comment: Modal content
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                  Add a Squish
+                </button>
+                <h4 class="modal-title">Enter new squish info:</h4>
+              </div>
+              <div class="modal-body">
+                <form id="new-squish-form">
+                  <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label for="size">Size (in inches):</label>
+                    <input type="text" id="size" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label for="bio">Bio:</label>
+                    <input type="text" id="bio" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label for="squish-date">Squish Date:</label>
+                    <input type="date" id="squish-date" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label for="puchase-date">Squish Date:</label>
+                    <input
+                      type="date"
+                      id="purchase-date"
+                      class="form-control"
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="container" id="squish-holder">
+        <div class="squish">
+          <ul class="list-group">
+            <li class="list-group-item"><b>Name: </b>Gordon</li>
+            <li class="list-group-item">
+              <b>Bio: </b>"You don't have to fear, Gordon is one of the
+              friendliest 'Mallows around! He loves helping others so much that
+              one day he wants to start his own nonprofit!"
+            </li>
+            <li class="list-group-item"><b>Size: </b>16 in.</li>
+            <li class="list-group-item"><b>Squish Date: </b>5 January 2020</li>
+            <li class="list-group-item"><b>Purchase Date:</b> 6 March 2022</li>
+            <hr />
+          </ul>
+        </div>
+
+        <div class="squish">
+          <ul class="list-group">
+            <li class="list-group-item"><b>Name: </b>Gordon</li>
+            <li class="list-group-item">
+              <b>Bio: </b>"You don't have to fear, Gordon is one of the
+              friendliest 'Mallows around! He loves helping others so much that
+              one day he wants to start his own nonprofit!"
+            </li>
+            <li class="list-group-item"><b>Size: </b>16 in.</li>
+            <li class="list-group-item"><b>Squish Date: </b>5 January 2020</li>
+            <li class="list-group-item"><b>Purchase Date:</b> 6 March 2022</li>
+            <hr />
+          </ul>
+        </div>
+      </div> -->
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="profile.js"></script>
+  </body>
+</html>

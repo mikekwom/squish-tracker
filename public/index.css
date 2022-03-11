@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Fredoka:wght@400;700&family=Pacifico&display=swap");
+
+/* font-family: 'Comfortaa', cursive;
+font-family: 'Fredoka', sans-serif;
+font-family: 'Pacifico', cursive; */
+
+/***********************************
+* DARK GREEN - #8B8C5E
+* LIGHT GREEN - #BFBDA3
+* LIGHT PINK - #F2BFB3
+* DARK PINK - #D96262
+* RED - #A63737
+************************************/
+
+body {
+  background-color: #bfbda3 !important;
+  justify-content: center;
+}
+
+nav {
+  background-color: #8b8c5e !important;
+  border: none !important;
+}
+
+nav .active {
+  background-color: #f2bfb3 !important;
+}
+
+.container a .squishmallow-link {
+  font-family: "Comfortaa", cursive;
+  color: red !important;
+  background-color: blue !important;
+}
+
+.hidden {
+  display: none;
+}
+
+.log-out-btn-li {
+  margin-top: 10px;
+}
+
+.navbar-brand {
+  color: #a63737 !important;
+  font-family: "Pacifico", cursive;
+}
+
+/* THIS DOESNT WORK */
+.navbar ul li .active {
+  color: blue !important;
+  background-color: #f2bfb3 !important;
+}
+
+.jumbotron {
+  background-color: #f2bfb3 !important;
+  color: #8b8c5e !important;
+}
+
+.jumbotron h1 {
+  color: #a63737 !important;
+  font-family: "Pacifico", cursive;
+  margin: 6px;
+}
+
+.jumbotron p {
+  font-family: "Comfortaa", cursive;
+  margin: 12px;
+}
+
+#av-img {
+  justify-content: center;
+  width: 180px;
+  height: 180px;
+  border: 5px black solid;
+  border-radius: 50%;
+}
+
+#profile-header {
+  font-family: "Fredoka bold 700", sans-serif;
+  display: flex;
+}
+
+.squish li {
+  background-color: #f2bfb3 !important;
+}
+
+#squish-holder {
+  font-family: "Comfortaa", cursive;
+}
+
+@media only screen and (min-width: 769px) {
+  #mobile-view {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #desktop-view {
+    display: none;
+  }
+
+  #profile-header {
+    display: grid;
+    justify-content: center;
+  }
+}
